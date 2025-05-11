@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aunkit'sportfolio</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 33);
+        color: rgb(251, 251, 252);
+        margin: 0;
+        padding: 0;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 90px;
+        background-color: rgb(4, 4, 48);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 10px 25px;
+      }
+      nav ul li a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 19px;
+      }
+      nav ul li a:hover {
+        color: rgb(129, 73, 181);
+        cursor: pointer;
+        /* transition: 0.8s; */
+        font-size: 20px;
+      }
+      .left {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-around;
+        /* margin-top: 30px; */
+        margin: 89px 0px;
+      }
+      .firstsection > div {
+        width: 30%;
+      }
+      .rightsection img {
+        width: 300px;
+        height: 300px;
+        margin-top: 50px;
+      }
+      .leftsection {
+        font-size: 25px;
+        margin-top: 130px;
+        margin-left: 20px;
+        align-items: center;
+      }
+      .color {
+        color: rgb(63, 149, 203);
+        font-size: 28px;
+      }
+      /* Dropdown styles */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(4, 4, 48);
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        border: rgb(98, 96, 96) 2px solid;
+      }
+
+      .dropdown-content li {
+        padding: 12px 16px;
+        text-align: left;
+        list-style: none;
+      }
+
+      .dropdown-content li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+      }
+
+      .dropdown-content li a:hover {
+        background-color: rgb(20, 20, 80);
+        color: aqua;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      #element {
+        color: rgb(98, 98, 156);
+      }
+      .secondsection {
+        display: flex;
+        margin: auto;
+        padding: auto;
+        width: 80vw;
+        height: 45vw;
+      }
+      main hr {
+        border: 0;
+        background: rgb(85, 85, 186);
+        height: 1.5px;
+        margin: 20px 40px;
+      }
+      .secondsection h1 {
+        font-size: 30px;
+      }
+      .box {
+        background: white;
+        width: 120vw;
+        height: 2px;
+        margin: 110px 0;
+        display: flex;
+      }
+      .secondsection .verticle {
+        height: 93px;
+        width: 2px;
+        background-color: white;
+        margin: 0 140px;
+      }
+      .logo {
+        width: 22px;
+        position: relative;
+        top: -26px;
+        left: -9px;
+        size-adjust: 20px;
+      }
+      .verticle-title {
+        position: relative;
+        top: 90px;
+        left: -15px;
+        width: 150px;
+        font-size: 18px;
+      }
+      .verticle-dash {
+        position: relative;
+        top: 110px;
+        width: 170px;
+        left: -20px;
+        color: cadetblue;
+      }
+      footer {
+        display: flex;
+        height: 270px;
+        background-color: rgb(0, 16, 40);
+      }
+      .footer-first {
+        margin: 50px;
+        padding-top: 50px;
+        /*  display: flex;  */
+        font-size: 1.6rem;
+      }
+
+      .footer-second ul li {
+        list-style: none;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .footer-third ul li {
+        list-style: none;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 15px;
+        padding-left: 100px;
+      }
+      .footer-third ul li:hover {
+        color: rgb(71, 168, 168);
+        transition: 0.4s;
+        /* font-size: 19px; */
+      }
+      footer .footer-rights {
+        align-items: center;
+        justify-content: center;
+        display: inline-block;
+        display: flex;
+        margin-top: 200px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+      }
+      footer .footer-rights:hover {
+        font-size: 2rem;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Aunkit's portfiolo</div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#">Projects</a>
+              <ul class="dropdown-content">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">AIML Project</a></li>
+                <li><a href="#">App Development Project</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">services</a></li>
+            <li class="dropdown">
+              <a href="#">About me</a>
+              <ul class="dropdown-content">
+                <li><a href="#">My tems</a></li>
+                <li><a href="#">My Achievements</a></li>
+                <li><a href="#">My Completed Projects</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contact me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hi, My name is <span class="color">Aunkit</span>
+          <div>
+            and I am a learning web developement. <br />Also want to learn
+          </div>
+          <span id="element"></span>
+        </div>
+        <div class="rightsection"><img src="Daco_4184671.png" alt="" /></div>
+      </section>
+      <hr />
+      <section class="secondsection">
+        <h1>Work Experience</h1>
+        <div class="box">
+          <div class="verticle">
+            <img class="logo" src="html5-logo-31813.png" alt="logo" />
+            <div class="verticle-title">HTML Developer</div>
+            <div class="verticle-dash">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              tempora, dignissimos ad illum libero explicabo pariatur debitis
+              beatae voluptatum dolore. Vero, cupiditate odio?
+            </div>
+          </div>
+          <div class="verticle">
+            <img
+              class="logo"
+              src="CSS-Logo-PNG-Symbol-for-Web-Development-Transparent.png"
+              alt="logo"
+            />
+            <div class="verticle-title">CSS Developer</div>
+            <div class="verticle-dash">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              tempora, dignissimos ad illum libero explicabo pariatur debitis
+              beatae voluptatum dolore. Vero, cupiditate odio?
+            </div>
+          </div>
+          <div class="verticle">
+            <img
+              class="logo"
+              src="vecteezy_javascript-logo-png-javascript-icon-transparent-png_27127463.png"
+              alt="logo"
+            />
+            <div class="verticle-title">JS Developer</div>
+            <div class="verticle-dash">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              tempora, dignissimos ad illum libero explicabo pariatur debitis
+              beatae voluptatum dolore. Vero, cupiditate odio?
+            </div>
+          </div>
+          <div class="verticle">
+            <img class="logo" src="html5-logo-31813.png" alt="logo" />
+            <div class="verticle-title">HTML Developer</div>
+            <div class="verticle-dash">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              tempora, dignissimos ad illum libero explicabo pariatur debitis
+              beatae voluptatum dolore. Vero, cupiditate odio?
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-first">Aunkit's portfolio</div>
+      <div class="footer-second">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact me</a></li>
+        </ul>
+      </div>
+      <div class="footer-third">
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+          <li>Git Hub</li>
+        </ul>
+      </div>
+      <div class="footer-rights">
+        <h5>Copyright&#169;Aunkit'sportfolio.com|All rights reserved</h5>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["AIML", "App Developement", "UI/UX Design"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
